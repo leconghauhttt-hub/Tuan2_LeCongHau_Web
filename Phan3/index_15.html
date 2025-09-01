@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form thanh toán đơn hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="payment-container">
+        <h2>Thanh toán đơn hàng</h2>
+        <form>
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+
+            <label for="address">Địa chỉ:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Nhập địa chỉ" required></textarea>
+
+            <label for="total">Tổng tiền:</label>
+            <input type="number" id="total" name="total" placeholder="Nhập tổng tiền" required>
+
+            <label>Phương thức thanh toán:</label>
+            <div class="payment-methods">
+                <input type="radio" id="card" name="payment" value="Thẻ" required>
+                <label for="card">Thẻ</label>
+
+                <input type="radio" id="cod" name="payment" value="COD">
+                <label for="cod">Thanh toán khi nhận hàng (COD)</label>
+
+                <input type="radio" id="momo" name="payment" value="Momo">
+                <label for="momo">Momo</label>
+            </div>
+
+            <button type="submit">Thanh toán</button>
+        </form>
+    </div>
+</body>
+
+</html>

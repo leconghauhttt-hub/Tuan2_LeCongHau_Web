@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form khảo sát ý kiến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="survey-container">
+        <h2>Khảo sát ý kiến</h2>
+        <form>
+            <label>Giới tính:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Nam">
+                <label for="male">Nam</label>
+
+                <input type="radio" id="female" name="gender" value="Nữ">
+                <label for="female">Nữ</label>
+            </div>
+
+            <label>Sở thích:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="reading" name="hobby" value="Đọc sách">
+                <label for="reading">Đọc sách</label>
+
+                <input type="checkbox" id="gaming" name="hobby" value="Chơi game">
+                <label for="gaming">Chơi game</label>
+
+                <input type="checkbox" id="traveling" name="hobby" value="Du lịch">
+                <label for="traveling">Du lịch</label>
+            </div>
+
+            <label>Ý kiến của bạn:</label>
+            <textarea name="opinion" rows="5" placeholder="Nhập ý kiến của
