@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example Cafe Menu</title>
+  <style>
+    body {
+      background: #ffffff;
+      font-family: 'Times New Roman', Times, serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    form {
+      border: 1px solid #b34b4b;
+      width: 800px;
+      height: 450px;
+      background: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d61717;
+      font-style: italic;
+      text-shadow: 0 15px 10px #f4c9c9;
+      margin: 15px auto 10px;
+      letter-spacing: 2px;
+    }
+
+    .nav {
+      border-top: 1px solid #bcbcbc;
+      border-bottom: 1px solid #bcbcbc;
+      padding: 6px 14px;
+    }
+
+    .nav a {
+      position: relative;
+      left: 40px;
+      color: #6666cc;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .band {
+      display: block;
+      background: #f6efc4;
+      color: #7a1f1f;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: disc;
+      margin: 0 0 0 34px;
+      padding: 0;
+    }
+
+    .veg {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+
+    .special {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #d09100;
+    }
+
+    .back {
+      display: block;
+      color: #ff0000;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <form>
+    <h1>EXAMPLE CAFE MENU</h1>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <a href="#starter">Starter</a>
+      <a href="#main">Main Courses</a>
+      <a href="#desserts">Desserts</a>
+    </div>
+
+    <!-- Starter -->
+    <div class="section" id="starter">
+      <span class="band">Starter</span>
+      <ul>
+        <li>Chesnut and Mushroom Goujons <span class="veg">(v)</span></li>
+        <li>Goat Cheese<span class="veg">(v)</span></li>
+        <li><span class="special">Honey Soy Chicken Kebabs</span><span class="veg">(v)</span></li>
+        <li>Seafood Salad<span class="veg">(v)</span></li>
+      </ul>
+      <a href="#top" class="back">Back to Top</a>
+    </div>
+
+    <!-- Desserts -->
+    <div class="section" id="desserts">
+      <span class="band">Desserts</span>
+      <ul>
+        <li>Lemon Sorbet<span class="veg">(v)</span></li>
+        <li>Chocolate Mud Pie<span class="veg">(v)</span></li>
+        <li>Pecan Pie<span class="veg">(v)</span></li>
+        <li>Selection of fine Cheeses from Around the World<span class="veg">(v)</span></li>
+      </ul>
+      <a href="#top" class="back">Back to Top</a>
+    </div>
+  </form>
+</body>
+
+</html>

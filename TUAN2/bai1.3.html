@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example Cafe Menu</title>
+    <style>
+        body {
+            background: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            color: #000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .frame {
+            position: relative;
+            width: 1300px;
+            border: 1px solid #b34b4b;
+            background: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d61717;
+            font-style: italic;
+            text-shadow: 8px 8px 0px #f4c9c9;
+            margin: 15px auto 10px;
+            letter-spacing: 2px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 44px;
+            background: #f08080;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #b34b4b;
+            border-bottom: 1px solid #b34b4b;
+        }
+
+        .navbar a {
+            position: relative;
+            left: 80px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-right: 1px solid #fff;
+        }
+
+        .navbar a:hover {
+            background: #d46a6a;
+        }
+
+        .navbar .home img {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+
+        .search-box {
+            margin-left: 110px;
+        }
+
+        .search-box input {
+            border: 1px solid #b34b4b;
+        }
+
+        .search-box button {
+            border: 1px solid #b34b4b;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background: #f4c1c1;
+        }
+
+        .search-box {
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        .search-box input {
+            border: 1px solid #b34b4b;
+        }
+
+        .search-box button {
+            border: 1px solid #b34b4b;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background: #f4c1c1;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 300px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            margin-top: 5px;
+        }
+
+        .sidebar button {
+            display: flex;
+            width: 100%;
+            margin: 6px 0;
+            padding: 5px;
+            padding-left: 15px;
+            border-radius: 20px;
+            border: none;
+            background: #f6b5b5;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background: #d46a6a;
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: 20%;
+            margin-top: 20px;
+            border-radius: 100%;
+            box-shadow: 14px 14px 10px #dca1a1;
+        }
+
+        .band {
+            display: flex;
+            justify-content: start;
+            padding-left: 15px;
+            background: #f6b5b5;
+            color: #7a1f1f;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 10px 0;
+            margin-left: 220px;
+            margin-right: 200px;
+            letter-spacing: 15px;
+        }
+
+        ul {
+            list-style: disc;
+            margin: 0 0 0 34px;
+            padding: 0;
+        }
+
+        .veg {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+
+        .special {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #b87a00;
+        }
+
+        .back {
+            display: block;
+            color: #ff0000;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .info {
+            grid-column: 1 / span 3;
+            margin-top: 20px;
+        }
+
+        .info form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info input,
+        .info select,
+        .info textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid #888;
+            box-sizing: border-box;
+        }
+
+        .info textarea {
+            grid-column: 1 / span 2;
+            height: 80px;
+        }
+
+        .info .radio {
+            grid-column: 2;
+            display: flex;
+            align-items: start;
+        }
+
+        .radio label {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .info .buttons {
+            grid-column: 1 / span 2;
+        }
+
+        .info button {
+            padding: 16px 16px;
+            margin-right: 10px;
+            border: 1px solid #888;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .info button:hover {
+            background: #f4c1c1;
+        }
+
+        .events {
+            margin-top: 10px;
+            background: #000;
+            color: #fff;
+            margin-bottom: 200px;
+        }
+
+        .events h2 {
+            position: relative;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        .event-block {
+            margin-left: 30px;
+        }
+
+        .events h3 {
+            margin: 0px;
+        }
+
+        .event-block img {
+            width: 92%;
+            margin: 0px;
+        }
+
+        .event-block p {
+            width: 250px;
+            font-size: 13px;
+            margin-top: 0px;
+            margin-bottom: 26px;
+        }
+
+        .event-block a {
+            color: #f08080;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            display: block;
+            background: #f08080;
+            color: #fff;
+            text-align: center;
+            font-size: 25px;
+            padding: 25px;
+            font-weight: 700;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div class="frame">
+        <h1>EXAMPLE CAFE MENU</h1>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#top" class="home"><img src="images/icons8-home-50.png" alt="Home"></a>
+            <a href="#starter">Starter</a>
+            <a href="#main">Main Courses</a>
+            <a href="#desserts">Desserts</a>
+            <div class="search-box">
+                <input type="text">
+                <button>Go</button>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <button>Cafe Latte</button>
+                <button>Capuchino</button>
+                <button>Ocean Blue</button>
+                <button>Ice-cream Cafe</button>
+                <button>Order Online</button>
+                <img src="images/company.png" alt="Company">
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div id="starter">
+                    <span class="band">Starter</span>
+                    <ul>
+                        <li>Chesnut and Mushroom Goujons <span class="veg">(v)</span></li>
+                        <li>Goat Cheese <span class="veg">(v)</span></li>
+                        <li><span class="special">HONEY SOY CHICKEN KEBABS</span> <span class="veg">(v)</span></li>
+                        <li>Seafood Salad <span class="veg">(v)</span></li>
+                    </ul>
+                    <a href="#top" class="back">Back to Top</a>
+                </div>
+
+                <div id="desserts">
+                    <span class="band">Desserts</span>
+                    <ul>
+                        <li>Lemon Sorbet <span class="veg">(v)</span></li>
+                        <li>Chocolate Mud Pie <span class="veg">(v)</span></li>
+                        <li>Pecan Pie <span class="veg">(v)</span></li>
+                        <li>Selection of fine Cheeses from Around the World <span class="veg">(v)</span></li>
+                    </ul>
+                    <a href="#top" class="back">Back to Top</a>
+                </div>
+
+                <!-- Information -->
+                <div class="info">
+                    <span class="band">INFOMATION</span>
+                    <form>
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Telephone">
+                        <select>
+                            <option>USA</option>
+                            <option>Vietnam</option>
+                            <option>Japan</option>
+                            <option>France</option>
+                        </select>
+                        <div class="radio">
+                            <label><input type="radio" name="nationality"> Vietnamese</label>
+                            <label><input type="radio" name="nationality"> Foreigner</label>
+                        </div>
+                        <textarea placeholder="Comment"></textarea>
+                        <div class="buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Events -->
+            <div class="events">
+                <h2>Events</h2>
+                <div class="event-block">
+                    <h3>Regular Meetings</h3>
+                    <img src="images/meeting.png" alt="Meeting">
+                    <p>Host your regular team meetings or activities in the comfort of your own private room. <a
+                            href="#">Read more...</a></p>
+                </div>
+                <div class="event-block">
+                    <h3>Product Launches</h3>
+                    <img src="images/launch.png" alt="Launch">
+                    <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            ABC Company © - 12345678 - abccoffee@gmail.com
+        </div>
+    </div>
+</body>
+
+</html>
